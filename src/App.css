@@ -182,3 +182,122 @@
     border-right-color: var(--border);
   }
 }
+
+.App {
+  min-height: 100vh;
+  padding: 40px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  color: var(--text-h);
+}
+
+.header {
+  max-width: 720px;
+  width: min(100%, 720px);
+  text-align: center;
+}
+
+.total-count {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.flashcard {
+  width: min(420px, 92vw);
+  aspect-ratio: 16 / 10;
+  perspective: 1200px;
+  position: relative;
+  cursor: pointer;
+}
+
+.flashcard,
+.flashcard > .front,
+.flashcard > .back {
+  border-radius: 22px;
+}
+
+.flashcard {
+  transform-style: preserve-3d;
+}
+
+.flashcard > .front,
+.flashcard > .back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08), 0 8px 18px rgba(15, 23, 42, 0.05);
+  backface-visibility: hidden;
+  transition: transform 0.05s ease, opacity 0.05s ease;
+  color: #111827;
+}
+
+.flashcard > .front {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%);
+}
+
+.flashcard > .back {
+  transform: rotateY(180deg);
+  background: linear-gradient(180deg, #f8f9ff 0%, #eef0fa 100%);
+}
+
+.flashcard.flipped > .front {
+  transform: rotateY(180deg);
+}
+
+.flashcard.flipped > .back {
+  transform: rotateY(0deg);
+}
+
+.flashcard p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  text-align: center;
+  color: black;
+}
+
+.next-button {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.95rem 1.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.next-button:hover {
+  transform: translateY(-1px);
+  background: rgba(170, 59, 255, 0.95);
+}
+
+.next-button:focus-visible {
+  outline: 3px solid rgba(170, 59, 255, 0.35);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .App {
+    padding: 28px 16px 48px;
+    gap: 20px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .next-button {
+    width: min(100%, 320px);
+  }
+}
