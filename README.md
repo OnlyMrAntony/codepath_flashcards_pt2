@@ -4,25 +4,25 @@ Submitted by: **Anthony Heang**
 
 This web app: **These are flashcards meant to test the user's knowledge of random trivia!**
 
-Time spent: **.50** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
 
-- [ ] **The app displays the title of the card set, a short description, and the total number of cards**
+- [x] **The app displays the title of the card set, a short description, and the total number of cards**
   - [x] Title of card set is displayed 
   - [x] A short description of the card set is displayed 
-  - [ ] A list of card pairs is created
-  - [ ] The total number of cards in the set is displayed 
-  - [ ] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
-- [ ] **A single card at a time is displayed**
-  - [ ] Only one half of the information pair is displayed at a time
-- [ ] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
-  - [ ] Clicking on a card flips it over, showing the back with corresponding information 
-  - [ ] Clicking on a flipped card again flips it back, showing the front
-- [ ] **Clicking on the next button displays a random new card**
+  - [x] A list of card pairs is created
+  - [x] The total number of cards in the set is displayed 
+  - [x] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
+- [x] **A single card at a time is displayed**
+  - [x] Only one half of the information pair is displayed at a time
+- [x] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
+  - [x] Clicking on a card flips it over, showing the back with corresponding information 
+  - [x] Clicking on a flipped card again flips it back, showing the front
+- [x] **Clicking on the next button displays a random new card**
 
 The following **optional** features are implemented:
 
@@ -40,8 +40,9 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
+<img width="2772" height="1516" alt="web102project2_2nd" src="https://github.com/user-attachments/assets/6e541582-5448-4f55-911e-9dc357f388f3" />
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='"[C:\Users\anton\OneDrive\Desktop\web102project2_2nd.gif](https://github.com/user-attachments/assets/6e541582-5448-4f55-911e-9dc357f388f3")"' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif  
@@ -52,7 +53,7 @@ GIF created with ScreenToGif
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Some difficulties that I came across during this project included the CSS and making sure you don't see the answer of the new card when pressing the next card button.
 
 ## License
 
