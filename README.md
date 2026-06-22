@@ -45,11 +45,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+<img width="2255" height="1521" alt="project3web102_gif" title = 'flashcards_pt2' src="https://github.com/user-attachments/assets/dd73b662-3f08-4c71-a279-96ccabb939a7" />
 
-<img src='[http://i.imgur.com/link/to/your/gif/file.gif](https://drive.google.com/file/d/1v9LCkvCBEqSgoYoZocTY7B9QUBqyV3PJ/view?usp=sharing)' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ScreenToGif 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
