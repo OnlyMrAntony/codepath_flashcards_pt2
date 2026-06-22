@@ -4,22 +4,16 @@ import { flashcardData } from './data/flashcardData';
 import Flashcard from './components/Flashcard';
 
 const App = () => {
-  const [currentIndex, setCurrentIndex] = useState(() => 
-    Math.floor(Math.random() * flashcardData.length)
-  );
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const getRandomCard = () => {
-    let newIndex;
-    
-    if (flashcardData.length > 1) {
-      do {
-        newIndex = Math.floor(Math.random() * flashcardData.length);
-      } while (newIndex === currentIndex);
-    } else {
-      newIndex = 0;
-    }
+  const goNext = () => {
+    setCurrentIndex((prevIndex) =>
+      Math.min(prevIndex + 1, flashcardData.length - 1)
+    );
+  };
 
-    setCurrentIndex(newIndex);
+  const goBack = () => {
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
   return (
@@ -27,12 +21,17 @@ const App = () => {
       <div className="header">
         <h1>Trivia Flashcards!</h1>
         <h2>How well do you know your trivia?</h2>
-        <p className = "total-count">Total Cards: {flashcardData.length}</p>
+        <p className="total-count">Total Cards: {flashcardData.length}</p>
       </div>
-      <Flashcard card={flashcardData[currentIndex]} />
-      <button className="next-button" onClick={getRandomCard}>Next Card</button>
+      <Flashcard
+        card={flashcardData[currentIndex]}
+        currentIndex={currentIndex}
+        cardCount={flashcardData.length}
+        onNext={goNext}
+        onBack={goBack}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
